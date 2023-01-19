@@ -58,7 +58,7 @@ class ClientController extends Controller
     }
 
     public function search_bills_client($client){
-        $bill = Bill::find($client);
+        $bill = Bill::where('client_id', $client)->get();
         
         return response()->json($bill); 
 

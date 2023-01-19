@@ -30,7 +30,7 @@ class ClientController extends Controller
        
     }
 
-    public function show(Request $id){
+    public function show($id){
         $client = Client::find($id);
         
         return response()->json($client);

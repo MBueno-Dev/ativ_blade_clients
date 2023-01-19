@@ -38,4 +38,15 @@ class ClientController extends Controller
         
 
     }
+
+
+    
+    public function show_name($name){
+        $client = Client::find($name);
+        
+        return response()->json($client);
+
+        
+
+    }
 }

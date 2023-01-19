@@ -64,4 +64,11 @@ class ClientController extends Controller
 
     }
 
+    public function search_bills_exp($value){
+        $bill = Bill::where('value', '>', $value)->get();
+        
+        return response()->json($bill); 
+
+    }
+    
 }

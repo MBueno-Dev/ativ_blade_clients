@@ -42,7 +42,7 @@ class ClientController extends Controller
 
     
     public function show_name($name){
-        $client = Client::find($name);
+        $client = Client::where('name', '=', $name)->get();
         
         return response()->json($client);
 

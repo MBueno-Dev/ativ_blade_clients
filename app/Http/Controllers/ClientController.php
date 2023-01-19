@@ -56,4 +56,12 @@ class ClientController extends Controller
         return response()->json($client); 
 
     }
+
+    public function search_bills_client($client){
+        $bill = Bill::find($client);
+        
+        return response()->json($bill); 
+
+    }
+
 }

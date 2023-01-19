@@ -22,3 +22,4 @@ Route::post('/clients/store', [ClientController::class, 'store']);
 Route::get('/clients/show/{client}', [ClientController::class, 'show']);
 Route::get('/clients/name/{name}', [ClientController::class, 'show_name']);
 Route::get('/clients/search/{text}', [ClientController::class, 'search_text']);
+Route::get('/clients/bills/{client}', [ClientController::class, 'search_bills_client']);

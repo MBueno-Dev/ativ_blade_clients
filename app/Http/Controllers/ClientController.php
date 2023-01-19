@@ -80,7 +80,7 @@ class ClientController extends Controller
     }
 
     public function order(){
-        $bill = Bill::orderBy('name')->limit(2)->get;
+        $bill = Bill::orderBy('name')->limit(2)->get();
         
         return response()->json($bill); 
 
